@@ -6,5 +6,6 @@ public class Opgave04 {
         System.out.println(rainfall.minRainfall3());
         System.out.println(rainfall.minRainfallN(4));
         System.out.println(rainfall.minRainfallN(6));
+        System.out.println(rainfall.sameRainfall());
     }
 }

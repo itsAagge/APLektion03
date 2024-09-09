@@ -54,7 +54,20 @@ public class Rainfall {
      *  where the rainfall has been exactly the same each week.
      */
     public int sameRainfall() {
-        // TODO
-        return 0;
+        int count = 1;
+        int highestSoFar = 1;
+        int firstWeekOfSameRainfall = 0;
+        for (int i = 1; i < weeklyRainfall.length; i++) {
+            if (weeklyRainfall[i] == weeklyRainfall[i-1]) {
+                count++;
+            } else {
+                count = 0;
+            }
+            if (count > highestSoFar) {
+                highestSoFar = count;
+                firstWeekOfSameRainfall = i - count + 1;
+            }
+        }
+        return firstWeekOfSameRainfall;
     }
 }
