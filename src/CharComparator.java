@@ -6,8 +6,6 @@ public class CharComparator implements Comparator {
         if (o1.equals('G')) {
             if (o2.equals('G')) {
                 return 0;
-            } else if (o2.equals('W')) {
-                return -1;
             } else {
                 return -1;
             }
@@ -20,12 +18,10 @@ public class CharComparator implements Comparator {
                 return -1;
             }
         } else {
-            if (o2.equals('G')) {
-                return 1;
-            } else if (o2.equals('W')) {
-                return 1;
-            } else {
+            if (o2.equals('R')) {
                 return 0;
+            } else {
+                return 1;
             }
         }
     }
